@@ -19,6 +19,11 @@ from main import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/cinema/',views.print_movie),
-    path('api/v1/cinema/<int:id>/',views.print_movie_id),
+    path('api/v1/cinema/',views.print_cinema),
+    path('api/v1/cinema/<int:id>/',views.print_cinema_id),
+    path('api/v1/movies/',views.print_movie),
+    path('api/v1/movies/<int:id>/',views.print_movie_id),
+    path('api/v1/movies/reviews/',views.print_review),
+    path('api/v1/movies/genres/',views.print_genres),
+
 ]
