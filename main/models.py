@@ -27,9 +27,9 @@ class Movie(models.Model):
 
 
 class Review(models.Model):
-    text = models.TextField()
-    movie = models.ForeignKey(Movie, related_name='reviews', on_delete=models.CASCADE)  # ForeignKey
-    # is_active = models.BooleanField(default=True)
+    text = models.TextField(null=True)
+    movie = models.ForeignKey(Movie, related_name='reviews', on_delete=models.CASCADE, null=True)  # ForeignKey
+    is_active = models.BooleanField(default=True, null=True)
 
     def __str__(self):
         return self.text
