@@ -26,6 +26,8 @@ urlpatterns = [
     path('api/v1/movies/reviews/',views.print_review),
     path('api/v1/movies/genres/',views.print_genres),
     path('api/v1/movies/delete-update/<int:id>',views.delete_put_movie),
-    path('api/v1/movies/create-movie/',views.create_movie),
+    path('api/v1/movies/create_view_movie/',views.create_view_movie),
+    path('api/v1/movies/login/',views.login),
+    path('api/v1/movies/registration/',views.registration),
 
 ]
